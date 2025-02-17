@@ -79,6 +79,7 @@ const AppProvider=({children})=>{
         dispatch({type:'loaded'})
         try{
         const products=await axios.get(url);
+        console.log("get products ", products)
         const data=products.data;
         dispatch({type:'get_data', payload:data});
         }catch(error){
@@ -89,7 +90,7 @@ const AppProvider=({children})=>{
                 
 
     const getSingleProduct=async (id)=>{
-        const singleData=await axios.get("https://flowers-five-alpha.vercel.app/api/flowers?_id="+id);
+        const singleData=await axios.get("https://flowers-75rj.vercel.app/api/flowers?_id="+id);
         const single_actual_data=singleData.data.data[0];
         console.log(single_actual_data);
         dispatch({type: 'single_product', payload:single_actual_data})
@@ -104,7 +105,7 @@ const AppProvider=({children})=>{
 
     useEffect(()=>{
         
-        getProducts("https://flowers-five-alpha.vercel.app/api/flowers");
+        getProducts("https://flowers-75rj.vercel.app/api/flowers");
     },[])
 
     useEffect(()=>{
