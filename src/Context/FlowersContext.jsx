@@ -4,7 +4,7 @@ import { useContext, useReducer } from 'react'
 import { createContext } from 'react';
 
 const AppContext=createContext();
-const api="https://flowers-five-alpha.vercel.app/api/flowers";
+const api="https://flowers-75rj.vercel.app/api/flowers";
 
 const reducer=(state, action)=>{
     switch (action.type){
